@@ -1,0 +1,34 @@
+A51 MACRO ASSEMBLER  EXP4                                                                 02/20/2018 11:27:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp4.asm SET(SMALL) DEBUG PRINT(.\Listings\exp4.lst) OBJECT(.\Objects\e
+                      xp4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7E25              2     MOV R6, #025H
+0002 7912              3     MOV R1, #12H
+0004 7CF3              4     MOV R4, #0F3H
+0006 C006              5     PUSH 6
+0008 C001              6     PUSH 1
+000A C004              7     PUSH 4
+000C D003              8     POP 3
+000E D005              9     POP 5
+                      10     END
+A51 MACRO ASSEMBLER  EXP4                                                                 02/20/2018 11:27:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

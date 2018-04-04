@@ -1,0 +1,48 @@
+C51 COMPILER V9.57.0.0   EXP6                                                              04/04/2018 11:33:06 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE EXP6
+OBJECT MODULE PLACED IN .\Objects\exp6.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE exp6.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\exp6
+                    -.lst) TABS(2) OBJECT(.\Objects\exp6.obj)
+
+line level    source
+
+   1          /*WAP for LED interfacing to toggle all bits of port P1 in C*/
+   2          #include<reg51.h>
+   3          void ms_delay(unsigned int);
+   4          void main(void)
+   5          {
+   6   1      while(1)
+   7   1      {
+   8   2      P1=0x00;
+   9   2      ms_delay(500);
+  10   2      P1=0xFF;
+  11   2      ms_delay(500);
+  12   2      }
+  13   1      }
+  14          void ms_delay(unsigned int y)
+  15          {
+  16   1      unsigned int x,z;
+  17   1      {
+  18   2      for(x=0;x<=y;x++)
+  19   2      {
+  20   3      for(z=0;z<=1275;z++)
+  21   3      {}
+  22   3      }
+  23   2      }
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

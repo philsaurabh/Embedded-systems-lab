@@ -1,0 +1,38 @@
+A51 MACRO ASSEMBLER  EXP1                                                                 04/04/2018 11:31:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp1.asm SET(SMALL) DEBUG PRINT(.\Listings\exp1.lst) OBJECT(.\Objects\e
+                      xp1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7410              2     MOV A, #10H
+0002 75F005            3     MOV B, #05H
+0005 25F0              4     ADD A,B
+0007 F8                5     MOV R0,A
+0008 95F0              6     SUBB A,B
+000A F9                7     MOV R1,A
+000B A4                8     MUL AB
+000C FA                9     MOV R2,A
+000D 75F005           10     MOV B, #05H
+0010 84               11     DIV AB
+0011 FB               12     MOV R3,A
+                      13     END
+A51 MACRO ASSEMBLER  EXP1                                                                 04/04/2018 11:31:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

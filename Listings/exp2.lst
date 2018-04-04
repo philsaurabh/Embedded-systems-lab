@@ -1,0 +1,37 @@
+A51 MACRO ASSEMBLER  EXP2                                                                 04/04/2018 11:31:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp2.asm SET(SMALL) DEBUG PRINT(.\Listings\exp2.lst) OBJECT(.\Objects\e
+                      xp2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 742A              2     MOV A, #2AH
+0002 75F0A8            3     MOV B, #0A8H
+0005 55F0              4     ANL A,B
+0007 F8                5     MOV R0,A
+0008 45F0              6     ORL A,B
+000A F9                7     MOV R1,A
+000B 65F0              8     XRL A,B
+000D FA                9     MOV R2,A
+000E F4               10     CPL A
+000F FB               11     MOV R3,A
+                      12     END
+A51 MACRO ASSEMBLER  EXP2                                                                 04/04/2018 11:31:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

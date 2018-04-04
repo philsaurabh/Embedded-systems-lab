@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  TOOGLE                                                               02/20/2018 11:43:08 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+NO OBJECT MODULE REQUESTED
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE toogle.asm SET(SMALL) DEBUG PRINT(.\Listings\toogle.lst) OBJECT(.\Objec
+                      ts\toogle.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7455              2             BACK: MOV A, #55H
+0002 F590              3             MOV P1, A
+0004 120300            4             LCALL DELAY
+0007 80F7              5             SJMP BACK
+                       6             
+0300                   7     ORG 300H
+0300 7DFF              8             DELAY: MOV R5, #0FFH
+0302                   9             AGAIN: DJNZ R5 AGAIN
+*** ________________________________________________^
+*** ERROR #A9 IN 9 (toogle.asm, LINE 9): SYNTAX ERROR
+0304 22               10             RET 
+                      11             END
+A51 MACRO ASSEMBLER  TOOGLE                                                               02/20/2018 11:43:08 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0302H   A   
+BACK . . . . . . .  C ADDR   0000H   A   
+DELAY. . . . . . .  C ADDR   0300H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 1 ERROR(S)

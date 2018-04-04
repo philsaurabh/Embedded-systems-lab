@@ -1,0 +1,80 @@
+C51 COMPILER V9.57.0.0   EXP11                                                             04/04/2018 12:03:42 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE EXP11
+OBJECT MODULE PLACED IN .\Objects\exp11.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE exp11.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\exp
+                    -11.lst) TABS(2) OBJECT(.\Objects\exp11.obj)
+
+line level    source
+
+   1          /*WAP for rotating the stepper motor clockwise or anticlockwise*/
+   2          #include<reg51.h>
+   3          sbit m1=P0^0;
+   4          sbit m2=P0^2;
+   5          sbit m3=P0^1;
+   6          sbit m4=P0^3;
+   7          void delay(unsigned int x)
+   8          {
+   9   1      unsigned int a;
+  10   1      for(a=0;a<=x;a++)
+  11   1      {}
+  12   1      }
+  13          void move_clk(int y;int v)
+*** ERROR C141 IN LINE 13 OF exp11.c: syntax error near ';', expected ')'
+  14          {
+  15   1      int a;
+  16   1        for(a=0;a<=y;a++)
+  17   1      {
+  18   2      m1=1;m2=0;m3=0;m4=0;
+  19   2        delay(v);
+*** ERROR C202 IN LINE 19 OF exp11.c: 'v': undefined identifier
+  20   2        m1=0;m2=1;m3=0;m4=0;
+  21   2        delay(v);
+*** ERROR C202 IN LINE 21 OF exp11.c: 'v': undefined identifier
+  22   2        m1=0;m2=0;m3=1;m4=0;
+  23   2        delay(v);
+*** ERROR C202 IN LINE 23 OF exp11.c: 'v': undefined identifier
+  24   2        m1=0;m2=0;m3=0;m4=1;
+  25   2        delay(v);
+*** ERROR C202 IN LINE 25 OF exp11.c: 'v': undefined identifier
+  26   2      }
+  27   1      }
+  28          void move_anticlk(int y;int v)
+*** ERROR C141 IN LINE 28 OF exp11.c: syntax error near ';', expected ')'
+  29          {
+  30   1      int a;
+  31   1        for(a=0;a<=y;a++)
+  32   1      {
+  33   2        m1=0;m2=0;m3=0;m4=1;
+  34   2        delay(v);
+*** ERROR C202 IN LINE 34 OF exp11.c: 'v': undefined identifier
+  35   2        m1=0;m2=0;m3=1;m4=0;
+  36   2        delay(v);
+*** ERROR C202 IN LINE 36 OF exp11.c: 'v': undefined identifier
+  37   2        m1=0;m2=1;m3=0;m4=0;
+  38   2        delay(v);
+*** ERROR C202 IN LINE 38 OF exp11.c: 'v': undefined identifier
+  39   2        m1=1;m2=0;m3=0;m4=0;
+  40   2        delay(v);
+*** ERROR C202 IN LINE 40 OF exp11.c: 'v': undefined identifier
+  41   2      }
+  42   1      }
+  43          void motor_stop()
+  44          {
+C51 COMPILER V9.57.0.0   EXP11                                                             04/04/2018 12:03:42 PAGE 2   
+
+  45   1      m1=0;m2=0;m3=0;m4=1;
+  46   1      }
+  47          int main()
+  48          {
+  49   1        mov_clk(50,1000);
+  50   1        motor_stop();
+  51   1       delay(6000);
+  52   1       mov_anticlk(50,1000);
+  53   1        motor_stop();
+  54   1       delay(6000);
+  55   1        while(1)
+  56   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  10 ERROR(S)

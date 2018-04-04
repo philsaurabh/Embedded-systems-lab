@@ -1,0 +1,31 @@
+A51 MACRO ASSEMBLER  EXP3                                                                 04/04/2018 11:32:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp3.asm SET(SMALL) DEBUG PRINT(.\Listings\exp3.lst) OBJECT(.\Objects\e
+                      xp3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7400              2     MOV A, #00H
+0002 790A              3     MOV R1, #0AH
+0004 2403              4     Label: ADD A, #03H
+0006 D9FC              5             DJNZ R1, Label
+                       6     END
+A51 MACRO ASSEMBLER  EXP3                                                                 04/04/2018 11:32:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LABEL. . . . . . .  C ADDR   0004H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

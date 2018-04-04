@@ -1,0 +1,49 @@
+C51 COMPILER V9.57.0.0   EXP9                                                              04/04/2018 11:37:37 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE EXP9
+OBJECT MODULE PLACED IN .\Objects\exp9.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE exp9.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\exp9
+                    -.lst) TABS(2) OBJECT(.\Objects\exp9.obj)
+
+line level    source
+
+   1          /*WAP to display 0000 to 9999 on seven segment display in C*/
+   2          #include<reg51.h>
+   3          char num[10]={0xbf,0x86,0xdb,0xcf,0xeb,0xed,0xfd,0x87,0xff,0xef};
+   4          void delay(unsigned int);
+   5          void main(void)
+   6          {
+   7   1        int x;
+   8   1      for(x=0;x<=9;x++)
+   9   1      {
+  10   2      P2=0x0f;
+  11   2      P0=num[x];
+  12   2      delay(50);
+  13   2      }
+  14   1      }
+  15          void delay(unsigned int y)
+  16          {
+  17   1      unsigned int z,x;
+  18   1      {
+  19   2      for(z=0;z<=y;z++)
+  20   2      {
+  21   3      for(x=0;x<=1275;x++)
+  22   3      {}
+  23   3      }
+  24   2      }
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     75    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

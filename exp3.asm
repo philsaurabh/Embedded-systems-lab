@@ -1,0 +1,6 @@
+ORG 0000H
+MOV A, #00H
+MOV R1, #0AH
+Label: ADD A, #03H
+	DJNZ R1, Label
+END
